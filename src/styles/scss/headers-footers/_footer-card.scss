@@ -1,0 +1,31 @@
+.footer__card__wrappper {
+    width: 768px;
+    margin: 0 auto;
+    box-shadow: 0 10px 20px rgb(31, 32, 65, 0.05);
+    font-family: "Montserrat-Regular";
+    color: rgb(31, 32, 65, 0.75);
+    font-size: 14px;
+    line-height: 17px;
+    .footer__card__content {
+        padding-top: 120px;
+        padding-bottom: 102px;
+        background-color: #fff;
+        .footer__card__content__li {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .footer__card__li__copyright {
+            padding-bottom: 26px;
+        }
+        .footer__card__content__li__social_ul {
+            display: flex;
+            justify-content: center;
+            .footer__card__content__li__social_ul__li {
+                padding-right: 20px;
+            }
+            .footer__card__content__li__social_ul__li:last-child {
+                padding-right: 0px;
+            }
+        }
+    }
+}

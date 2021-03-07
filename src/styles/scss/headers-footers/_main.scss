@@ -1,0 +1,25 @@
+.main__background {
+    background-color: #f4f4f6;
+}
+
+.wrapper {
+    max-width: 1380px;
+    margin: 0 auto;
+}
+
+.main__logo {
+    padding-top: 30px;
+    padding-bottom: 62px;
+}
+
+.main__headers__footers {
+    list-style-type: none;
+    padding: 0;
+
+    .main__headers__footers__el {
+        padding-bottom: 40px;
+    }
+    .main__headers__footers__el:last-child {
+        padding-bottom: 0;
+    }
+}

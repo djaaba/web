@@ -1,0 +1,31 @@
+include ../utils/mixins
+block variables
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title #{title}
+    meta(name="description", content=description)
+    block head
+
+  body(class=pageClass)
+  .main__background
+    .wrapper
+      .main__logo
+        img(src="./src/assets/png/svg/toxin-logo.svg")
+      //- #app
+    ul.main__headers__footers
+      li.main__headers__footers__el
+        include ../includes/modules/headers-footers/unregistered-header
+      li.main__headers__footers__el
+        include ../includes/modules/headers-footers/registered-header
+      li.main__headers__footers__el
+        include ../includes/modules/headers-footers/footer
+      li.main__headers__footers__el
+        include ../includes/modules/headers-footers/footer-card
+    .content-wrapper
+      block content
+        
+        
+    block script
