@@ -1,0 +1,53 @@
+@import "../_arrow.scss";
+
+.subscription-text-field__container {
+    max-width: 320px;
+    font-size: 12px;
+    .subscription-text-field__container__wrapper {
+        // display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        .container__text_label {
+            font-family: "Montserrat-Bold";
+            vertical-align: text-top;
+            line-height: 15px;
+            padding-bottom: 5px;
+        }
+        .subscription-text-field__search {
+            border-radius: 4px;
+            border: 1px solid rgb(31, 32, 65, 0.25);
+            color: rgb(31, 32, 65, 0.25);
+            width: 245px;
+            height: 40px;
+            padding-left: 15px;
+            padding-bottom: 1px;
+            padding-right: 3px;
+            font-family: "Montserrat-Regular";
+            font-size: 14px;
+            line-height: 24px;
+            &:hover,
+            &:focus {
+                border: 1px solid rgb(31, 32, 65, 0.5);
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+                color: rgb(31, 32, 65, 0.75);
+            }
+        }
+
+        .subscription-text-field__button {
+            position: relative;
+            border: none;
+            right: 35px;
+            background-color: #fff;
+            height: 40px;
+            .arrow {
+                @include arrow(9px, 2px, 2px, 13px);
+                @include arrowColor(#8ba4f9);
+            }
+        }
+
+        ::placeholder {
+            color: rgb(31, 32, 65, 0.25);
+        }
+    }
+}

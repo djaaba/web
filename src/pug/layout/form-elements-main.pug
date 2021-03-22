@@ -1,0 +1,101 @@
+include ../utils/mixins
+block variables
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title #{title}
+    meta(name="description", content=description)
+    block head
+
+  body(class=pageClass)
+    .wrapper
+      .img-wrapper
+        img(src="./src/assets/png/svg/toxin-logo.svg")
+      .wrapper2
+        section.first-column
+          ul.form-elements__ul
+            li.form-elements__li
+              +text-field-default("Text Field", "Default", "Email")
+            li.form-elements__li
+              +text-field-hover-focus("Text Field", "Hover / Focus", "This is pretty awesome")
+            li.form-elements__li
+              +date-dropdown("Dropdown", "Сколько гостей")
+            li.form-elements__li
+              +masked-text-field("Masked text field", "ДД.ММ.ГГГГ")
+            li.form-elements__li
+              ul.form-elements__dropdown
+                li.form-elements__dropdown__li
+                  +dropdown-letter("Date dropdown", "ДД.ММ.ГГГГ")
+                li.form-elements__dropdown__li
+                  +dropdown-number("Date dropdown", "19.08.2019")
+            li.form-elements__li.form-elements__li_bottom
+              +filter-date-dropdown("Filter date dropdown", "19 авг - 23 авг")
+            li.form-elements__li
+              +subscription-text-field("Subscription text field", "Email")
+            li.form-elements__li.special-padding
+              +filter-date-dropdown("Dropdown", "2 спальни, 2 кровати...", "Default")
+            li.form-elements__li
+              ul.expandable-checkbox-list
+                .expandable-checkbox-list__header
+                  p.expandable-checkbox-list__title dropdown
+                  p.expandable-checkbox-list__subtitle expanded
+                li.expandable-checkbox-list__li
+                  p.expandable-checkbox-list__li-text 2 спальни, 2 кровати...
+                  i.is__arrow_down
+                    .arrow_down
+                  ul.dropdown
+                    +burger__menu("Спальни")
+                    +burger__menu("Кровати")
+                    +burger__menu("Ванные комнаты")
+            li.form-elements__li.special-padding2
+              ul.expandable-checkbox-list__container
+                li.expandable-checkbox-list__container__select-form
+                  .container__expandable-checkbox-list__text expandable checkbox list
+                  i.is__arrow_down
+                    .arrow_down
+                  
+            li.form-elements__li
+              ul.first-ul.expandable-checkbox
+                li.first-ul__li
+                  .content
+                    p.text expandable checkbox list
+                    i.is__arrow_down
+                      .arrow_down
+                  ul.second-ul
+                    +checkbox-list([
+                {label: "Завтрак", name: "additionally", value: "breakfast"},
+                {label: "Письменный стол",  name: "additionally", value: "desktop", checked: true},
+                {label: "Стул для кормления",  name: "additionally", value: "child-chair", checked: true},
+                {label: "Кроватка",  name: "additionally", value: "child-bed", checked: true},
+                {label: "Телевизор",  name: "additionally", value: "tv"},
+                {label: "Шампунь",  name: "additionally", value: "shampoo"},
+              ])
+            li.form-elements__li.special-padding3
+              ul.conditions
+                li.conditions__li
+                  .condition__block
+                    +comfort('./src/assets/png/svg/insert_emoticon.svg', "Комфорт", "Шумопоглощающие стены")
+                  hr.comfort-line
+                li.conditions__li
+                  .condition__block
+                    +comfort('./src/assets/png/svg/location_city.svg', "Удобство", "Окно в каждой из спален")
+                  hr.comfort-line
+        section.second-column
+          ul.second-column__ul
+            li.second-column__li
+              p.checkbox-title Checkbox Buttons
+              ul.checkbox-ul
+                li.checkbox-li
+                  +myCheckbox("Можно курить", false)
+                li.checkbox-li
+                  +myCheckbox("Можно с питомцами", true)
+                li.checkbox-li
+                  +myCheckbox("Можно пригласить гостей (до 10 человек)", true)
+              
+        
+      .content-wrapper
+        block content
+        
+    block script

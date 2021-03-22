@@ -1,4 +1,125 @@
-mixin item(title, descr)
-  .item
-    h2.item-title= title
-    p.item-descr= descr
+mixin text-field-default(label, type, placeholder)
+  .text-field-default__container
+    .text-field-default__container__wrapper 
+      p.container__text_label= label
+      p.container__text_type= type 
+    input.container__text-field-default(
+      type='text'
+      placeholder= placeholder
+      checked
+    )
+
+mixin text-field-hover-focus(label, type, placeholder)
+  .text-field-hover-focus__container
+    .text-field-hover-focus__container__wrapper 
+      p.container__text_label= label
+      p.container__text_type= type 
+    input.container__text-field-hover-focus(
+      type='text'
+      placeholder= placeholder
+      checked
+    )
+
+mixin date-dropdown(label, placeholder)
+  .date-dropdown__container
+    .date-dropdown__container__wrapper 
+      p.container__text_label= label
+    .date-dropdown__container__select-form
+      .container__date-dropdown__text= placeholder 
+      i.is__arrow_down
+        .arrow_down
+
+mixin masked-text-field(label, placeholder)
+  .masked-text-field__container
+    .masked-text-field__container__wrapper 
+      p.container__text_label= label
+    input.masked-text-field__container__select-form(
+      type='text'
+      placeholder= placeholder
+      checked
+    )
+
+mixin dropdown-letter(label, placeholder)
+  .dropdown-letter__container
+    .dropdown-letter__container__wrapper 
+      p.container__text_label= label
+    .dropdown-letter__container__select-form
+      .container__dropdown-letter__text= placeholder 
+      i.is__arrow_down
+        .arrow_down
+
+mixin dropdown-number(label, placeholder)
+  .dropdown-number__container
+    .dropdown-number__container__wrapper 
+      p.container__text_label= label
+    .dropdown-number__container__select-form
+      .container__dropdown-number__text= placeholder 
+      i.is__arrow_down
+        .arrow_down
+
+mixin filter-date-dropdown(label, placeholder, type)
+  .filter-date-dropdown__container
+    .filter-date-dropdown__container__wrapper 
+      p.container__text_label= label
+      p.container__text_type= type 
+    .filter-date-dropdown__container__select-form
+      .container__filter-date-dropdown__text= placeholder 
+      i.is__arrow_down
+        .arrow_down
+
+mixin subscription-text-field(label, placeholder)
+  .subscription-text-field__container
+    .subscription-text-field__container__wrapper 
+      p.container__text_label= label
+      input.subscription-text-field__search(
+        type='text'
+        placeholder="Email"
+        checked
+      )
+      button.subscription-text-field__button
+        .arrow.arrow-bar.is-right
+        
+//- жесть
+
+mixin burger__menu(name)
+  .submenu__point 
+    p.submenu__text= name
+    .wrap
+      .icon-minus
+      .icon-counter 0
+      .icon-plus
+
+mixin checkbox(checkboxOptions)
+  - var {label, details, name, value, checked = false} = checkboxOptions;
+
+  label.checkbox(class= details ? "checkbox--with-details" : "")
+    input.visually-hidden.checkbox__input(type="checkbox" name= name checked= checked value= value)
+    .checkbox__indicator
+      .checkbox__mark
+    .checkbox__description
+      != label
+      if details
+        p.checkbox__details!= details
+
+mixin checkbox-list(list)
+  ul.checkbox-list
+    for checkbox in list
+      li.checkbox-list__item
+        +checkbox(checkbox)
+
+mixin comfort(pic, title, subtitle)
+  .comfort
+    .comfort-content
+      .comfort-pic
+        img(src= pic)
+      .comfort-text 
+        p.comfort-title= title
+        p.comfort-subtitle= subtitle
+  
+mixin myCheckbox(text, bool)
+  label.checkbox
+    input.visually-hidden.checkbox__input(type="checkbox" checked= bool)
+    .checkbox__indicator
+      .checkbox__mark
+    .checkbox__description
+      p.checkbox--with-details= text

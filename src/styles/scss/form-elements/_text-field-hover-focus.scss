@@ -1,0 +1,39 @@
+.text-field-hover-focus__container {
+    max-width: 320px;
+    height: 64.44px;
+    font-size: 12px;
+    line-height: 15px;
+    .text-field-hover-focus__container__wrapper {
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        padding-bottom: 5px;
+    }
+    .container__text-field-hover-focus {
+        width: 299px;
+        height: 40px;
+        border-radius: 4px;
+        border: 1px solid rgb(31, 32, 65, 0.5);
+        color: rgb(31, 32, 65, 0.75);
+        padding-top: 1px;
+        padding-left: 15px;
+        padding-bottom: 1px;
+        padding-right: 3px;
+        font-family: "Montserrat-Regular";
+        font-size: 14px;
+        line-height: 24px;
+    }
+    ::placeholder {
+        color: rgb(31, 32, 65, 0.75);
+    }
+    .container__text_label {
+        font-family: "Montserrat-Bold";
+        // vertical-align: text-top;
+        // line-height: 22px;
+    }
+    .container__text_type {
+        font-family: "Montserrat-Regular";
+        // vertical-align: text-bottom;
+        color: rgb(31, 32, 65, 0.5);
+    }
+}

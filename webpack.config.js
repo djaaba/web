@@ -24,7 +24,7 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
-            template: './src/pug/pages/headers-footers-index.pug'
+            template: './src/pug/pages/form-elements-index.pug'
         }),
         new CleanWebpackPlugin(),
         ...PAGES.map(page => new HTMLWebpackPlugin({

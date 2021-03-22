@@ -1,0 +1,107 @@
+.img-wrapper {
+    padding-top: 30px;
+    padding-bottom: 62px;
+}
+.wrapper {
+    max-width: 1380px;
+    margin: 0 auto;
+}
+.wrapper2 {
+    padding-left: 111px;
+    display: flex;
+}
+
+.first-column {
+    .form-elements__ul {
+        padding-right: 126px;
+
+        .form-elements__li {
+            padding-bottom: 20px;
+            max-width: 320px;
+        }
+        .form-elements__li_bottom {
+            padding-bottom: 40px;
+        }
+        .form-elements__dropdown {
+            padding-top: 20px;
+            display: flex;
+            .form-elements__dropdown__li {
+                padding-right: 20px;
+                padding-bottom: 20px;
+            }
+        }
+        .special-padding {
+            padding-top: 80px;
+        }
+        .special-padding2 {
+            padding-top: 138px;
+            padding-bottom: 36px;
+        }
+        .special-padding3 {
+            padding-top: 252px;
+            padding-bottom: 0;
+        }
+    }
+}
+
+.comfort {
+    width: 291px;
+    height: 51px;
+    font-family: "Montserrat-Regular";
+    font-size: 14px;
+    .comfort-content {
+        display: flex;
+        // padding-bottom: 17px;
+    }
+    .comfort-pic {
+        width: 48px;
+        height: 48px;
+        padding-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .comfort-text {
+        text-align: justify;
+    }
+    .comfort-title {
+        font-family: "Montserrat-Bold";
+        line-height: 24px;
+    }
+    .comfort-subtitle {
+        line-height: 24px;
+    }
+}
+.comfort-line {
+    margin: 0px;
+    width: 280px;
+    height: 1px;
+    border: none;
+    background-color: rgba(31, 32, 65, 0.1);
+}
+.condition__block {
+    padding-bottom: 17px;
+}
+
+.conditions__li {
+    padding-bottom: 20px;
+}
+///////////////////
+.checkbox-title {
+    font-family: "Montserrat-Bold";
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-bottom: 17px;
+}
+.checkbox-ul {
+    max-width: 222px;
+    .checkbox-li {
+        padding-bottom: 10px;
+        &:last-child{
+            padding-bottom: 0;
+        }
+    }
+    .checkbox--with-details {
+        width: 192px;
+    }
+}
